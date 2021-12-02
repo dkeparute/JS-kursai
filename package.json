@@ -1,0 +1,21 @@
+{
+  "name": "1-dom",
+  "version": "1.0.0",
+  "description": "Demo projektas apie NPM naudojimą",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Node.js",
+    "npm"
+  ],
+  "author": "Dovile Keparute",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
