@@ -8,6 +8,27 @@
     <title>DOM</title>
     <link rel="stylesheet" href="./css/main.css">
     <style>
+        body {
+            display: flex;
+            padding: 100px 0;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        input,
+        button {
+            padding: 0 20px;
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        span {
+            padding: 0 20px;
+            border: 1px dotted red;
+        }
         header {
             display: flex;
             justify-content: space-between;
@@ -86,8 +107,14 @@
         <div class="number">0</div>
         <button class="plus" type="button">+</button>
     </form>
+    <form>
+        <label for="">Tavo zinutes tekstas</label>
+        <input type="text" />
+        <button type="button">Submit</button>
+    </form>
+    <div>Tu parasei: <span></span></div>
     <ul></ul>
-    <script src="./JavaScript/09.js"></script>
+    <script src="./JavaScript/10.js"></script>
 </body>
 
 </html>
