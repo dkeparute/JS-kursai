@@ -18,20 +18,27 @@ let counter = 0;
 const h1 = document.getElementsByTagName('h1')[1];
 console.log(h1);
 
+function liElement(buttonTupe, h1Text = 'Žaidimas progrese!') {
+    h1.innerText = h1Text;
+    number.innerText = counter;
+    ulDOM.innerHTML += `<li>Paspaudei ${buttonTupe} ir dabartinis rezultatas yra ${counter}.</li>`;
+}
+
 minus.addEventListener('click', function () {
-    number.innerText = --counter;
-    h1.innerText = "Žaidimas progrese";
+    --counter;
+    liElement('minusa')
 })
 plius.addEventListener('click', function () {
-    number.innerText = ++counter;
-    h1.innerText = "Žaidimas progrese";
+    ++counter;
+    liElement('pliusa')
 })
 const h1Default = h1.innerText;
 
 reset.addEventListener('click', function () {
     counter = 0;
-    number.innerText = counter;
-    h1.innerText = h1Default;
+    liElement('reseta', h1Default);
 })
 
-
+const ulDOM = document.getElementsByTagName('ul')[1];
+ulDOM.innerHTML = '<li>Tu pasileidai zaidima - sekmes!</li>';
+console.log(ulDOM);
