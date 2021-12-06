@@ -9,4 +9,3 @@ for (let i = 0; i < listDOM.length; i++) {
 //     console.log(ingridientas.textContent);
 // }
 
-
