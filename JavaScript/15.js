@@ -1,10 +1,14 @@
 function generuotiSocials(selector, iconList) {
     // validation
-    if (typeof selector !== 'string' || selector.length <1) {
+    if (typeof selector !== 'string' || selector.length < 1) {
         console.error('ivestas selectorius negali buti tuscias stringas ir privalo buti tik stringas');
         return false;
     }
-    
+    if (!Array.isArray(iconList) || iconList.length < 1) {
+        console.error('tai nera masyvas');
+        return false;
+    }
+
     // logic
     const selectorDOM = document.querySelector(selector);
     let htmlElements = '';
@@ -14,10 +18,10 @@ function generuotiSocials(selector, iconList) {
     }
 
     // logic validation
-if(!selectorDOM){
-    console.error('neteisingas selectorius');
-    return false;
-}
+    if (!selectorDOM) {
+        console.error('neteisingas selectorius');
+        return false;
+    }
 
     // result return
     selectorDOM.innerHTML = htmlElements;
@@ -25,7 +29,9 @@ if(!selectorDOM){
 
 const icons = ['facebook', 'instagram', 'twitter', 'linkedin'];
 
-generuotiSocials('.socials', icons);
+// generuotiSocials('.socials', icons);
 // PATESTAVIMAS
 // generuotiSocials('', icons);
 // generuotiSocials('labas', icons);
+// generuotiSocials('.socials', 2);
+generuotiSocials('.socials', []);
