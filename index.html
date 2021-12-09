@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/extra.css">
     <link rel="stylesheet" href="./css/12.css">
+    <link rel="stylesheet" href="./css/13.css">
 </head>
 <!-- <style>
         body {
@@ -135,7 +136,7 @@
     <div>Tu parasei: <span></span></div> -->
 
 <body>
-    <h1>Programuotoju uzeigele</h1>
+    <!-- <h1>Programuotoju uzeigele</h1>
     <form>
         <div class="form-row">
             <label for="customer">Kliento vardas</label>
@@ -178,8 +179,29 @@
             <button type="submit">Uzsakyti</button>
         </div>
     </form>
-    <div class="order">Uzsakymas...</div>
-    <script src="./JavaScript/12.js"></script>
+    <div class="order">Uzsakymas...</div> -->
+    <h1>Rungtynes</h1>
+    <div class="lenta">
+        <div class="rezultatas" data-komanda="namu">0</div>
+        <span>:</span>
+        <div class="rezultatas" data-komanda="sveciu">0</div>
+    </div>
+    <div class="aikstele">
+        <form class="komanda" data-komanda="namu">
+            <h2>Namu komanda</h2>
+            <button type="button" data-points="1">+1</button>
+            <button type="button" data-points="2">+2</button>
+            <button type="button" data-points="3">+3</button>
+        </form>
+        <form class="komanda" data-komanda="sveciu">
+            <h2>Sveciu komanda</h2>
+            <button type="button" data-points="1">+1</button>
+            <button type="button" data-points="2">+2</button>
+            <button type="button" data-points="3">+3</button>
+        </form>
+    </div>
+
+    <script src="./JavaScript/13.js"></script>
 </body>
 
 </html>
