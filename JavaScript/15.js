@@ -11,16 +11,19 @@ function generuotiSocials(selector, iconList) {
 
     // logic
     const selectorDOM = document.querySelector(selector);
-    let htmlElements = '';
-    for (let i = 0; i < iconList.length; i++) {
-        htmlElements += `
-        <i class="fa fa-${iconList[i]}"></i>`;
-    }
 
     // logic validation
     if (!selectorDOM) {
         console.error('neteisingas selectorius');
         return false;
+    }
+
+    let htmlElements = '';
+    for (let i = 0; i < iconList.length; i++) {
+        if (typeof iconList[i] !== 'string' || iconList[i].length === 0) {
+            continue;
+        }
+        htmlElements += `<i class="fa fa-${iconList[i]}"></i>`;
     }
 
     // result return
@@ -34,4 +37,5 @@ const icons = ['facebook', 'instagram', 'twitter', 'linkedin'];
 // generuotiSocials('', icons);
 // generuotiSocials('labas', icons);
 // generuotiSocials('.socials', 2);
-generuotiSocials('.socials', []);
+// generuotiSocials('.socials', []);
+generuotiSocials('.socials', ['facebook', '', 5, true, false, [], null, NaN]);
