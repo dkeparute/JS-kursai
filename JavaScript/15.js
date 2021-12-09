@@ -11,14 +11,14 @@ function generuotiSocials(selector, iconList) {
 
     // logic
     const selectorDOM = document.querySelector(selector);
+    let htmlElements = '';
+    
 
     // logic validation
     if (!selectorDOM) {
         console.error('neteisingas selectorius');
         return false;
     }
-
-    let htmlElements = '';
     for (let i = 0; i < iconList.length; i++) {
         if (typeof iconList[i] !== 'string' || iconList[i].length === 0) {
             continue;
